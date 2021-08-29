@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class SphereCatcher : MonoBehaviour
@@ -24,6 +23,9 @@ public class SphereCatcher : MonoBehaviour
                     SphereOnSceneGroup[i].transform.position = transform.position;
 
                     Sphere = SphereOnSceneGroup[i];
+                    
+                    ParticleSystem Particle = transform.GetComponentInChildren<ParticleSystem>();
+                    Particle.Play();
                 }
             }
         }

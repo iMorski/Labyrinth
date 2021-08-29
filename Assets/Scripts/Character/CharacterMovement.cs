@@ -12,7 +12,7 @@ public class CharacterMovement : MonoBehaviour
     private void Awake()
     {
         Rigidbody = GetComponent<Rigidbody>();
-        Animator = GetComponent<Animator>();
+        Animator = GetComponentInChildren<Animator>();
     }
     
     private bool OnCast;
