@@ -14,13 +14,15 @@ public class UiButton : MonoBehaviour
         Touch.TapFinish += OnTouchTapFinish;
     }
 
-    public virtual void OnTouchTapBegin()
+    private void OnTouchTapBegin()
     {
         Animator.Play("Ui-Push-In");
+        Animator.Play("Ui-Sphere-Arrow-In", 1);
     }
     
-    public virtual void OnTouchTapFinish()
+    private void OnTouchTapFinish()
     {
         Animator.Play("Ui-Push-Out");
+        Animator.Play("Ui-Sphere-Arrow-Out", 1);
     }
 }

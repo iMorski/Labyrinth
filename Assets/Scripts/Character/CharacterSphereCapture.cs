@@ -36,6 +36,9 @@ public class CharacterSphereCapture : MonoBehaviour
 
         ParticleSystem Particle = Sphere.transform.GetComponentInChildren<ParticleSystem>();
         Particle.Play();
+
+        AudioSource Audio = Sphere.GetComponent<AudioSource>();
+        Audio.Play();
     }
 
     public void Release()

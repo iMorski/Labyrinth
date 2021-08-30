@@ -3,21 +3,16 @@ using UnityEngine;
 public class PlayerMovement : CharacterMovement
 {
     [SerializeField] private UiJoystick Joystick;
-    
-    /*
+    [SerializeField] private UiTouch Touch;
     
     private void Start()
     {
-        PlayerSphere Sphere = PlayerContainer.Instance.PlayerSphere;
-        
-        Sphere.CastBegin += OnCastBegin;
-        Sphere.CastFinish += OnCastFinish;
+        Touch.TapBegin += OnTouchTapBegin;
+        Touch.TapFinish += OnTouchTapFinish;
     }
 
-    private void OnCastBegin() { ChangeState(); }
-    private void OnCastFinish() { ChangeState(); }
-    
-    */
+    private void OnTouchTapBegin() { ChangeState(); }
+    private void OnTouchTapFinish() { ChangeState(); }
 
     private void Update()
     {
